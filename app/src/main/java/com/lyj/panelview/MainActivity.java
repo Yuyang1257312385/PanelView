@@ -9,22 +9,22 @@ import com.lyj.panel.PanelView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private PanelView mPanelView;
+    private PanelView mPanel;
     private Button mStartBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mPanelView = (PanelView) findViewById(R.id.view_panel);
+        mPanel = (PanelView) findViewById(R.id.view_panel);
         mStartBtn = (Button) findViewById(R.id.btn_start);
         mStartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPanelView.setMaxValue(5000);
-                mPanelView.setCurrentValue(4000);
-                mPanelView.setMaxDuration(5000);
-                mPanelView.setStepColorList(new String[]{"#ff0000","#00ff00","#0000ff"});
-                mPanelView.start();
+                mPanel.setMaxValue(5000);
+                mPanel.setCurrentValue(4000);
+                mPanel.setMaxDuration(5000);
+                mPanel.setStepColorList(new String[]{"#ff0000","#00ff00","#0000ff"});
+                mPanel.start();
             }
         });
     }

@@ -9,11 +9,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -133,11 +131,6 @@ public class PanelView extends View {
         setMeasuredDimension(width,width);
     }
 
-
-    @Override
-    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right+width, bottom+width);
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {
